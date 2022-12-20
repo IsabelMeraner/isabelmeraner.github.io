@@ -17,11 +17,6 @@ body {
   color: white;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 
 .title {
   font-size: 2rem;
