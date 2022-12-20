@@ -50,9 +50,9 @@ h1 {
   font-style: italic;
 }
 
-.image {
+#profile-pic {
   text-align: center;
-  width: 60%;
+  max-width: 450px;
 }
 
 .footer {
