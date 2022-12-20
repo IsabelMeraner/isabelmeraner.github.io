@@ -12,6 +12,10 @@ body {
 }
 
 .header {
+  grid-area: hd;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
   background-color: #420a55;
   padding: 1rem;
   color: white;
@@ -42,7 +46,15 @@ h1 {
   font-size: 2rem;
 }
 
-.byline {
+.container {
+  display: grid;
+  grid-template-rows: 110px calc(100vh - 210px) 110px;
+  grid-template-areas: "hd" "main" "ft";
+  box-sizing: border-box;
+}
+
+
+.published {
   font-style: italic;
 }
 
@@ -52,6 +64,10 @@ h1 {
 }
 
 .footer {
+  grid-area: ft;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
   text-align: center;
   padding: 1rem;
   background: #420a55;
