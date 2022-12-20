@@ -68,7 +68,7 @@ h1 {
   text-align: left;
 }
 
-#social, #social-link, #footer-links {
+.footer-links, .footer-link {
   list-style-type: none;
 }
 
