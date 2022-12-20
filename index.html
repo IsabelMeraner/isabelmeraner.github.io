@@ -1,17 +1,19 @@
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
+<body>
 <div class="wrapper">
     <!-- TODO cookies -->
       <header class="header">
         <a class="title" href="#">Portfolio</a>
         <nav aria-label="Main navigation">
           <ul class="menu">
-            <li><a href="#coding">Coding</a></li>
-            <li><a href="#teaching">Teaching & Lecturing</a></li>
-            <li><a href="#excursions">Biodiversity Excurions</a></li>
+            <li><a href="#">whoami</a></li>
+            <li><a href="#coding">coding</a></li>
+            <li><a href="#teaching">teaching & lecturing</a></li>
+            <li><a href="#excursions">biodiversity excurions</a></li>
           </nav>
       </header>
 
@@ -24,10 +26,16 @@
             <img id="profile-pic" alt="profile pic" src="./public/isa.jpg" />
           </figure>
           <p>I am computational linguist, passioned for biodiversity. </p>
+
           <h2>whatelseyouneed2know</h2>
-          <p>- this</p>
-          <p>- and</p>
-          <p>- that</p>
+          <ul class="info" role="menu">
+            <li class="info-link">i am living on a farm now</li>
+          </ul>
+
+          <h2>more serious stuff</h2>
+          <ul class="cv" role="menu">
+            <li class="cv-link">check out my cv: <a href="./public/cv_meraner_en.pdf" target="_blank"> </li>
+          </ul>
         </article>
       </main>
 
@@ -48,3 +56,6 @@
 
 
     </div>
+
+    <script src="js/script.js"></script>
+</body>

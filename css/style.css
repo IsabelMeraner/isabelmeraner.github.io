@@ -7,7 +7,7 @@ body {
   font-size: 16px;
   margin: 0;
   height: 100vh;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .wrapper {
@@ -68,7 +68,7 @@ h1 {
   text-align: left;
 }
 
-ul {
+#social, #social-link, #footer-links {
   list-style-type: none;
 }
 
