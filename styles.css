@@ -1,0 +1,74 @@
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+body {
+  font-size: 16px;
+  margin: 0;
+  height: 100vh;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #420a55;
+  padding: 1rem;
+  color: white;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  margin: 1.5rem 0;
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem 3rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.byline {
+  font-style: italic;
+}
+
+.image {
+  text-align: center;
+  width: 60%;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #420a55;
+  color: white;
+}
+
+.columns {
+  justify-content: center;
+  display: flex;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+}
+
