@@ -1,8 +1,5 @@
-a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
+
+
 body {
   font-size: 16px;
   margin: 0;
@@ -68,7 +65,12 @@ h1 {
   text-align: left;
 }
 
-.footer-links, .footer-link {
-  list-style-type: none;
+.footer-links {
+  list-style: none;
 }
 
+.footer-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
