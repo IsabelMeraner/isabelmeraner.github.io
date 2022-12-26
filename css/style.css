@@ -4,6 +4,10 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+a {
+  color: #420a55;
+}
+
 .header {
   grid-area: hd;
   box-sizing: border-box;
@@ -45,6 +49,7 @@ body {
   flex-direction: column;
   max-width: 66%;
   text-align: justify;
+  line-height: 120%;
 }
 
 h1 {
@@ -56,6 +61,10 @@ h1 {
   grid-template-rows: 100px calc(100vh - 200px) 100px;
   grid-template-areas: "hd" "main" "ft";
   box-sizing: border-box;
+}
+
+.article-header {
+  padding-top: 10px;
 }
 
 .info-pic {
