@@ -28,6 +28,10 @@ a {
   display: inline-block;
 }
 
+.title:hover {
+  color:aquamarine !important;
+}
+
 .menu {
   display: flex;
   padding: 25px;
@@ -95,6 +99,10 @@ h1 {
   text-decoration: none;
 }
 
+.header-link:hover {
+  color: #cd8ee0;
+}
+
 .footer-link {
   padding-left: 15px;
 }
@@ -113,13 +121,26 @@ h1 {
 
 .button {
   white-space: nowrap;
-  background-color: #8e5e9c;
+  background-color: #cd8ee0;
+  border: 1px solid #420a55; 
   border-radius: 5px;
   max-width: fit-content;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  text-align: center;
+  display: inline-block;
   padding: 2px 4px 2px 4px;
+  transition-duration: 0.4s;
+}
+
+.button:hover, .footer-link:hover {
+  color: aquamarine;
+}
+
+.button:hover {
+  border: 1px solid #ffffff; 
+  box-shadow: 0 9px 12px 0 rgba(0,0,0,0.24), 0 15px 45px 0 rgba(0,0,0,0.19);
 }
 
 .qualification-list {
