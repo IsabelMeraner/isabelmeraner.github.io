@@ -51,7 +51,6 @@ a {
 .box {
   display: flex;
   flex-direction: column;
-  max-width: 66%;
   text-align: justify;
   line-height: 120%;
 }
@@ -159,6 +158,9 @@ h1 {
       display: block;
   }
 
+  .box {
+    max-width: 66%;
+  }
 
   .container {
       display: grid;
