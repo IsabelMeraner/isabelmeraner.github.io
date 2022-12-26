@@ -50,6 +50,7 @@ a {
 
 .box {
   display: flex;
+  max-width: 100%;
   flex-direction: column;
   text-align: justify;
   line-height: 120%;
@@ -159,7 +160,7 @@ h1 {
   }
 
   .box {
-    max-width: 66%;
+    max-width: 66% !important;
   }
 
   .container {
