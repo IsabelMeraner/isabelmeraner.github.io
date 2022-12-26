@@ -1,45 +1,48 @@
 body {
   font-size: 16px;
   margin: 0;
-  height: 100vh;
   font-family: 'Courier New', Courier, monospace;
-}
-
-.wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .header {
   grid-area: hd;
   box-sizing: border-box;
+  border-bottom: 1px solid #442916;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  text-overflow: ellipsis;
   background-color: #420a55;
   padding: 1rem;
   color: white;
 }
 
-
 .title {
   font-size: 2rem;
   font-weight: 700;
   display: inline-block;
-  margin: 1.5rem 0;
 }
 
 .menu {
   display: flex;
-  padding: 0;
+  padding: 25px;
   margin: 0;
   justify-content: space-evenly;
   list-style-type: none;
+  flex-direction: row 
 }
 
 .main {
+  grid-area: main;
   flex: 1;
+  overflow: auto;
   padding: 1.5rem 3rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -48,15 +51,11 @@ h1 {
 
 .container {
   display: grid;
-  grid-template-rows: 110px calc(100vh - 210px) 110px;
+  grid-template-rows: 100px calc(100vh - 200px) 100px;
   grid-template-areas: "hd" "main" "ft";
   box-sizing: border-box;
 }
 
-
-.published {
-  font-style: italic;
-}
 
 #profile-pic {
   text-align: center;
@@ -65,31 +64,60 @@ h1 {
 
 .footer {
   grid-area: ft;
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  text-align: center;
+  justify-content: space-around;
+  border-top: 1px solid #442916;
   padding: 1rem;
   background: #420a55;
   color: white;
 }
 
-.columns {
-  justify-content: center;
-  display: flex;
-  text-align: left;
-}
 
-.footer-links {
-  list-style: none;
-}
-
-.footer-link, .header-link, .button-up {
+.footer-link, .header-link, .link-up {
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
 
+.footer-link {
+  padding-left: 15px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: smaller;
+}
+
+.header-link {
+  padding: 25px;
+}
+
+.cv-link {
+  color: #66297a;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .button-up {
-  background-color: #64446e;;
+  background-color: #8e5e9c;
+  border-radius: 5px;
+  max-width: fit-content;
+}
+
+@media (min-width: 900px) {
+  nav {
+      display: block;
+  }
+
+
+  .container {
+      display: grid;
+      grid-template-rows: 80px calc(100vh - 140px) 60px;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd" "main main main main main main main main main main main main" "ft ft ft ft ft ft ft ft ft ft ft ft";
+  }
+
 }
