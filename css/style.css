@@ -79,6 +79,10 @@ h1 {
 .profile-pic {
   border-radius: 100%;
   max-height: 300px;
+  padding: .25em;
+  color: pink;
+  border: .25em solid;
+  background: #EE3F73;
 }
 
 .footer {
@@ -122,7 +126,7 @@ h1 {
 .button {
   white-space: nowrap;
   background-color: #EE3F73;
-  border: 1px solid #420a55; 
+  border: 0.3px solid #F8918C; 
   border-radius: 5px;
   max-width: fit-content;
   color: white;
@@ -136,10 +140,7 @@ h1 {
 
 .button:hover {
   color: #420a55;
-}
-
-.button:hover {
-  border: 1px solid #ffffff; 
+  /* border: 1px solid #ffffff;  */
   box-shadow: 0 9px 12px 0 rgba(0,0,0,0.24), 0 15px 45px 0 rgba(0,0,0,0.19);
 }
 
