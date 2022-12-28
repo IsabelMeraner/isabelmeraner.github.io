@@ -1,4 +1,5 @@
 document.getElementById("hamburger-menu").addEventListener("click", expandMenu);
+document.getElementById("menu-close").addEventListener("click", expandMenu);
 
 function expandMenu() {
     let sidebar = document.getElementById("sidebar");
