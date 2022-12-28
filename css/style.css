@@ -96,7 +96,11 @@ h1 {
 }
 
 .article-header {
-  padding-top: 10px;
+  padding: 25px 0 25px 5px;
+  background: #3b3a3a;
+  color: white;
+  border-radius: 6px;
+  border-bottom: 4px solid #FFC0CB;
 }
 
 .info-pic {
@@ -140,7 +144,6 @@ h1 {
 .footer-icon-link:hover {
   color: #ee3f73;
 }
-
 
 .socials, .contact, .copyright {
   display: flex;
