@@ -90,7 +90,7 @@ h1 {
 .container {
   display: grid;
   grid-template-rows: 80px calc(100vh - 140px) 60px;
-  grid-template-areas: "hd" "main" "ft" "sb";
+  grid-template-columns: auto auto repeat(10, 1fr);
   box-sizing: border-box;
   grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd" "sb sb main main main main main main main main main main" "ft ft ft ft ft ft ft ft ft ft ft ft";
 }
