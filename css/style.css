@@ -40,13 +40,25 @@ a {
 #hamburger-menu {
   cursor: pointer;
   margin-right: auto;
-  margin-left: 15px;
+  margin-left: 1rem;
+  transition: color 0.3s ease; /* Smooth transition for color */
 }
 
 #hamburger-menu:hover {
-  color: aquamarine ;
+  color: aquamarine;
+  animation: wiggle 0.5s ease-in-out;
+  animation-iteration-count: 5;
 }
 
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(10deg); }
+  60% { transform: rotate(-10deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
 
 #sidebar {
   grid-area: sb;
@@ -74,7 +86,7 @@ nav {
   grid-area: main;
   flex: 1;
   overflow: auto;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 1.5rem;
 }
 
 .box {
@@ -98,7 +110,7 @@ h1 {
 }
 
 .article-header {
-  padding: 0px 0 0px 5px;
+  /*padding: 0px 0 0px 5px;*/
   /*background: #3b3a3a;*/
   color:  #3b3a3a;
   /*border-radius: 6px;*/
@@ -242,6 +254,10 @@ h1 {
   padding: 20px;
   max-width: 1200px;
   margin: auto;
+  background-color: rgba(66, 10, 85, 0.3); /* background with transparency */
+  border: 4px solid #ee3f73;
+  border-radius: 15px; /* rounded container */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* light shadow around the gallery */
 }
 
 .gallery-item {
@@ -250,12 +266,33 @@ h1 {
   min-width: 250px;
   overflow: hidden;
   border-radius: 10px;
-  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
-  transition: transform 0.3s ease;
+  position: relative; /* For additional hover effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* smooth transitions */
+  border: 2px solid transparent; /* initial border */
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  border: 2px solid rgb(31, 31, 31); /* botanical-themed border */
+  pointer-events: none; /* keep this non-interactive */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+  opacity: 1; /* border becomes visible on hover */
 }
 
 .gallery-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(2deg); /* slight rotation for a playful effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* stronger shadow on hover */
+  filter: brightness(1.1) saturate(1.2); /* boost brightness and saturation on hover */
 }
 
 .gallery-item img {
@@ -264,11 +301,22 @@ h1 {
   display: block;
   object-fit: cover;
   border-radius: 10px;
+  border: 2px dashed #f8918c;
+  transition: filter 0.3s ease; /* smooth image transition */
 }
+
+.gallery-item img:hover {
+  filter: grayscale(10%) contrast(1.2); /* slight grayscale effect on hover for a vintage touch */
+}
+
 
 @media (min-width: 900px) {
   nav {
     display: block;
+  }
+
+  .main {
+    padding: 1.5rem 2rem;
   }
 
   .menu {

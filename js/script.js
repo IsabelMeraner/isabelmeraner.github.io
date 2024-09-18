@@ -1,8 +1,8 @@
 document.getElementById("hamburger-menu").addEventListener("click", expandMenu);
-document.getElementById("menu-close").addEventListener("click", expandMenu);
 document.getElementById("sidebar").addEventListener("click", expandMenu);
 
 function expandMenu() {
+    console.log("Clicked ")
     let sidebar = document.getElementById("sidebar");
     const mediaQuery = window.matchMedia('(max-width: 900px)')
 
