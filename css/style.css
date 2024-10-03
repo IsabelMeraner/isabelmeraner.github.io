@@ -169,7 +169,7 @@ h1 {
   grid-area: ft;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   border-top: 1px solid #442916;
   padding: 1rem;
   background: #420a55;
