@@ -23,18 +23,25 @@ a {
   color: white;
 }
 
-.title {
-  font-size: 2rem;
-  font-weight: 700;
-  padding: 25px;
-  display: inline-block;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
+.i-title {
+  font-size: 70%;
+  color: #00e4d4;
 }
 
-.title:hover {
-  color: aquamarine;
+.b-title {
+  font-size: 52%;
+  color: gold;
+}
+
+.title {
+  font-size: 2rem;
+  padding: 25px;
+  display: inline-block;
+  overflow: hidden;
+  color: black; /* Default text color when not animated */
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
 }
 
 #hamburger-menu {
@@ -45,7 +52,7 @@ a {
 }
 
 #hamburger-menu:hover {
-  color: aquamarine;
+  color: #00e4d4;
   animation: wiggle 0.5s ease-in-out;
   animation-iteration-count: 5;
 }
@@ -65,15 +72,15 @@ a {
   display: flex;
   flex-direction: row;
   padding: 1rem;
-  background: #ee3f73;
-  color: white;
+  background: #00e4d4;
+  color: black;
   display: none;
 }
 
 .sidebar-link {
   display: flex;
   flex-direction: row;
-  color: white;
+  color: black;
   font-weight: bold;
   padding-top: 10px;
 }
@@ -187,7 +194,7 @@ h1 {
 }
 
 .footer-icon-link:hover {
-  color: #ee3f73;
+  color: #00e4d4;
 }
 
 .socials, .contact, .copyright {
@@ -215,11 +222,11 @@ h1 {
 
 .button {
   white-space: nowrap;
-  background-color: #ee3f73;
-  border: 0.3px solid #f8918c;
+  background-color: rgba(188, 225, 221, 0.7); /* background with transparency */
+  border: 0.3px solid white;
   border-radius: 5px;
   max-width: fit-content;
-  color: white;
+  color: #505D67;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
@@ -254,8 +261,8 @@ h1 {
   padding: 20px;
   max-width: 1200px;
   margin: auto;
-  background-color: rgba(66, 10, 85, 0.3); /* background with transparency */
-  border: 4px solid #ee3f73;
+  background-color: rgba(188, 225, 221, 0.7); /* background with transparency */
+  border: 4px solid #420a55;
   border-radius: 15px; /* rounded container */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* light shadow around the gallery */
 }
@@ -302,7 +309,7 @@ h1 {
   display: block;
   object-fit: none;
   border-radius: 10px;
-  border: 2px dashed #f8918c;
+  border: 2px dashed #448045;
   transition: filter 0.3s ease; /* smooth image transition */
 }
 
@@ -365,7 +372,7 @@ h1 {
 
   .header-link:hover,
   .footer-text-link:hover {
-    color: #ee3f73;
+    color: #00e4d4;
   }
 
   .info-pic {
