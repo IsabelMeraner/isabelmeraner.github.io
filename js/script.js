@@ -12,3 +12,17 @@ function expandMenu() {
         sidebar.style.display = "none"
     }
 }
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var slides = document.getElementsByClassName("mySlides");
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].classList.add("active");
+    setTimeout(carousel, 2000);
+}

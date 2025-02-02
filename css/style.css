@@ -1,8 +1,20 @@
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   font-size: 16px;
   text-transform: lowercase;
-  margin: 0;
   font-family: "Courier New", Courier, monospace;
+  background: #b4a7b7;
 }
 
 a {
@@ -93,15 +105,16 @@ nav {
   grid-area: main;
   flex: 1;
   overflow: auto;
-  padding: 1.5rem 1.5rem;
+
 }
 
 .box {
   display: flex;
   width: 100%;
   flex-direction: column;
-  text-align: justify;
+  text-align: left;
   line-height: 120%;
+  padding: 1.5rem 1.5rem;
 }
 
 h1 {
@@ -116,57 +129,48 @@ h1 {
   grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd" "sb sb main main main main main main main main main main" "ft ft ft ft ft ft ft ft ft ft ft ft";
 }
 
+.container, .gallery-container {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .article-header {
-  /*padding: 0px 0 0px 5px;*/
-  /*background: #3b3a3a;*/
   color:  #3b3a3a;
-  /*border-radius: 6px;*/
-  /*border-bottom: 4px solid #FFC0CB;*/
 }
 
-.info-pic {
-  max-width: 250px;
-}
 
-.image {
-  margin-left: 0px;
-}
-
-#whoami, #coding, #texting, #teaching, #excursions {
+#whoami, #coding, #linguae, #ideas, #excursions {
   scroll-margin-top: 50px; /* Adjust the margin value to control how far above the element the scroll lands */
 }
 
 .profile-pic {
   border-radius: 100%;
-  max-height: 200px;
+  max-height: 150px; /* Slightly smaller */
   padding: 0.25em;
   color: pink;
   border: 0.25em solid;
   background: #ee3f73;
-
-  /* Initial state for animation */
-  opacity: 0;
-  transform: scale(0.8) rotate(-42deg);
+  max-width: 250px;
+  margin-left: 0px;
 
   /* Animation properties */
-  animation: profileEntry 4s ease forwards; /* 1.5 seconds entry animation */
-
+  animation: profileEntry 4s ease-in-out infinite alternate;
 }
 
-
-/* Keyframes for the profile pic entrance animation */
+/* Keyframes for the looping animation */
 @keyframes profileEntry {
   0% {
-    opacity: 0;
-    transform: scale(0.5) rotate(-45deg); /* Start small and rotated */
+    opacity: 1; /* Always visible */
+    transform: scale(0.1) rotate(-95deg);
   }
   50% {
-    opacity: 0.7;
-    transform: scale(1.1) rotate(10deg); /* Overshoot slightly for a bounce effect */
+    opacity: 1; /* No fading */
+    transform: scale(1.1) rotate(10deg);
   }
   100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg); /* End at normal size */
+    opacity: 1; /* Always visible */
+    transform: scale(1) rotate(0deg);
   }
 }
 
@@ -253,71 +257,54 @@ h1 {
   font-weight: bold;
 }
 
-.gallery {
+
+.gallery-container {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  max-height: 90vh;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-  background-color: rgba(188, 225, 221, 0.7); /* background with transparency */
-  border: 4px solid #420a55;
-  border-radius: 15px; /* rounded container */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* light shadow around the gallery */
-}
-
-.gallery-item {
-  flex: 1 1 250px;
-  max-width: 70%;
-  min-width: 250px;
+  align-items: center;
+  background-size: contain; /* Ensures it covers the whole area without stretching */
+  background: url('../public/gallery/wood-texture.jpeg') repeat fixed center;
+  background-size: contain; /* Ensures it covers the whole area without stretching */
   overflow: hidden;
-  border-radius: 10px;
-  position: relative; /* For additional hover effects */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* smooth transitions */
-  border: 2px solid transparent; /* initial border */
+  /*border-radius: 15px;*/
+  /*padding: 15px;*/
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
 }
 
-.gallery-item::before {
-  content: '';
+/* Ensuring wooden background texture fits naturally */
+.gallery-container::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 10px;
-  border: 2px solid rgb(31, 31, 31); /* botanical-themed border */
-  pointer-events: none; /* keep this non-interactive */
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover::before {
-  opacity: 1; /* border becomes visible on hover */
-}
-
-.gallery-item:hover {
-  transform: scale(1.3) rotate(2deg); /* slight rotation for a playful effect */
-  z-index: 10; /* Bring the hovered item to the front */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* stronger shadow on hover */
-  filter: brightness(1.3) saturate(1.5); /* boost brightness and saturation on hover */
-}
-
-.gallery-item img {
   width: 100%;
   height: 100%;
-  display: block;
-  object-fit: none;
-  border-radius: 10px;
-  border: 2px dashed #448045;
-  transition: filter 0.3s ease; /* smooth image transition */
+  background: rgba(0, 0, 0, 0.05); /* Soft overlay to make images pop slightly */
+  pointer-events: none;
 }
 
-.gallery-item img:hover {
-  filter: grayscale(10%) contrast(1.2); /* slight grayscale effect on hover for a vintage touch */
+.mySlides {
+  max-width: 85%;
+  max-height: 85%;
   object-fit: contain;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.98) translateY(5px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  border: 5px solid rgb(177, 131, 47); /* Thinner, softer white border */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Less intense shadow */
+  border-radius: 8px; /* Slightly rounded corners */
 }
 
+/* Active image effect */
+.mySlides.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
 
 @media (min-width: 900px) {
   nav {
@@ -338,13 +325,15 @@ h1 {
   }
 
   .box {
-    max-width: 68% !important;
+    max-width: 80% !important;
+    padding: 1.5rem 1.5rem;
   }
 
   .container {
     display: grid;
     grid-template-rows: 80px calc(100vh - 140px) 60px;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    width: 100%;
     grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd" "main main main main main main main main main main main main" "ft ft ft ft ft ft ft ft ft ft ft ft";
   }
 
@@ -381,5 +370,28 @@ h1 {
 
   .profile-pic {
     max-height: 200px;
+  }
+
+  .gallery-container {
+    width: 95vw;
+    height: 75vh;
+    max-height: 75vh;
+    background: url('../public/gallery/wood-texture.jpeg') repeat fixed center;
+    background-size: contain; /* Ensures it covers the whole area without stretching */
+    border-radius: 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+  .show {
+    display: block;
+    opacity: 1;
   }
 }
