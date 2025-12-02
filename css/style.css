@@ -10,6 +10,14 @@ html, body {
 }
 
 
+@font-face {
+  font-family: 'IziSecundo';
+  src: url('../public/fonts/izisecundo/iziXR-Regularia.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-size: 16px;
   text-transform: lowercase;
@@ -36,10 +44,13 @@ a {
 }
 
 .i-title {
-  font-size: 70%;
+  font-size: 64px;
   color: #00e4d4;
 }
-
+.z-title {
+  font-size: 64px;
+  color: black;
+}
 .b-title {
   font-size: 52%;
   color: gold;
@@ -54,6 +65,11 @@ a {
   font-weight: bold;
   text-decoration: none;
   position: relative;
+}
+
+/* Apply izi secundo font only where explicitly requested */
+.izi-secundo-text {
+  font-family: 'IziSecundo', "Courier New", Courier, monospace;
 }
 
 #hamburger-menu {
@@ -93,6 +109,7 @@ a {
   display: flex;
   flex-direction: row;
   color: black;
+  font-size: 22px;
   font-weight: bold;
   padding-top: 10px;
 }
@@ -137,6 +154,8 @@ h1 {
 
 .article-header {
   color:  #3b3a3a;
+  font-family: 'IziSecundo', "Courier New", Courier, monospace;
+  font-size: 42px;
 }
 
 
@@ -447,6 +466,7 @@ h1 {
   .header-link {
     display: block;
     color: white;
+    font-size: 32px;
     font-weight: bold;
     text-decoration: none;
   }
