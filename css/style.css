@@ -306,6 +306,98 @@ h1 {
   transform: scale(1) translateY(0);
 }
 
+
+/* ===== Splash container ===== */
+#splash-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* ===== Particles ===== */
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background: radial-gradient(circle,
+    #fff 0%,
+    #420a55 30%,
+    #00e4d4 60%,
+    gold 100%
+    );
+
+    animation: splash 1.4s ease-out forwards;
+}
+
+/* random sparkles */
+.particle.star {
+    clip-path: polygon(
+            50% 0%,
+            61% 38%,
+            100% 50%,
+            61% 62%,
+            50% 100%,
+            39% 62%,
+            0% 50%,
+            39% 38%
+    );
+}
+
+/* ===== main explosion animation ===== */
+@keyframes splash {
+    0% {
+        transform:
+                translate(0,0)
+                scale(0.1)
+                rotate(0deg);
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+                translate(
+                        calc(var(--x) * 1px),
+                        calc(var(--y) * 1px)
+                )
+                scale(1.5)
+                rotate(720deg);
+        opacity: 0;
+    }
+}
+
+
+/* ===== Quick flash fade background ===== */
+.magic-flash {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+
+    background:
+            radial-gradient(circle,
+            rgba(255,255,255,.6),
+            rgba(255,20,147,.2),
+            rgba(0,191,255,.1),
+            transparent
+            );
+
+    animation: flash 1.7s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
 @media (min-width: 900px) {
   nav {
     display: block;
