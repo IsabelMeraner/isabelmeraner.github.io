@@ -267,7 +267,7 @@ h1 {
   justify-content: center;
   align-items: center;
   background-size: contain; /* Ensures it covers the whole area without stretching */
-  background: url('../public/gallery/wood-texture.jpeg') repeat fixed center;
+  background: url('../public/gallery/wood-texture.webp') repeat fixed center;
   background-size: contain; /* Ensures it covers the whole area without stretching */
   overflow: hidden;
   /*border-radius: 15px;*/
@@ -376,7 +376,7 @@ h1 {
     width: 95vw;
     height: 75vh;
     max-height: 75vh;
-    background: url('../public/gallery/wood-texture.jpeg') repeat fixed center;
+    background: url('../public/gallery/wood-texture.webp') repeat fixed center;
     background-size: contain; /* Ensures it covers the whole area without stretching */
     border-radius: 15px;
   }
