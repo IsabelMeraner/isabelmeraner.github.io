@@ -23,6 +23,7 @@ body {
   text-transform: lowercase;
   font-family: "Courier New", Courier, monospace;
   background: #b4a7b7;
+  color: #3b3a3a;
 }
 
 a {
@@ -196,7 +197,9 @@ h1 {
 
 
 .footer {
-  grid-area: ft;
+    font-family: 'iziXR', "Courier New", Courier, monospace;
+    font-size: 18px;
+    grid-area: ft;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -204,6 +207,7 @@ h1 {
   padding: 1rem;
   background: #420a55;
   color: white;
+
 }
 
 .footer-text-link {
@@ -314,7 +318,6 @@ h1 {
   opacity: 0;
   transform: scale(0.98) translateY(5px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-  border: 5px solid rgb(177, 131, 47); /* Thinner, softer white border */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Less intense shadow */
   border-radius: 8px; /* Slightly rounded corners */
 }
